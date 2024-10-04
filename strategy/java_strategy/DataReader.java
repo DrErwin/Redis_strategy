@@ -19,7 +19,6 @@ public class DataReader {
              BufferedReader br = new BufferedReader(reader) // 建立一个对象，它把文件内容转成计算机能读懂的语言
         ) {
             String line;
-            //网友推荐更加简洁的写法
             while ((line = br.readLine()) != null) {
                 // 一次读入一行数据
                 // System.out.println(line);
@@ -31,6 +30,6 @@ public class DataReader {
     }
 
     public String[] getData(){
-        return (String[])this.cyclicVisitData.toArray();
+        return (String[])this.cyclicVisitData.toArray(new String[this.cyclicVisitData.size()]);
     }
 }

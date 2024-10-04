@@ -11,7 +11,7 @@ import numpy as np
 # 源数据地址
 DATA_PATH = '../GeoLite2-Country-Blocks-IPv4.csv'
 # 数据数量
-DATA_AMOUNT = 5000
+DATA_AMOUNT = 200000
 # 访问次数
 VISIT_TIME = 1000000
 # 最大循环长度

@@ -13,11 +13,11 @@ import pandas as pd
 # 源数据地址
 DATA_PATH = '../GeoLite2-Country-Blocks-IPv4.csv'
 # 数据数量
-DATA_AMOUNT = 5000
+DATA_AMOUNT = 200000
 # 访问次数
 VISIT_TIME = 1000000
 # 控制冥函数的衰减速率
-ALPHA = 10.0
+ALPHA = 10
 
 
 # 读取GeoLite2-Country-Blocks-IPv4.csv
@@ -36,7 +36,7 @@ for i in random_numbers:
     index = int(i/(float(100/DATA_AMOUNT)))
     local_visit_data.append(choose_ip_array[index])
 
-# plt.hist(local_visit_data,bins=500)
+# plt.hist(local_visit_data)
 # plt.show()
 
 # 将访问记录保存为txt文件

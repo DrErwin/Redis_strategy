@@ -4,15 +4,16 @@ import numpy as np
 # 源数据地址
 DATA_PATH = '../GeoLite2-Country-Blocks-IPv4.csv'
 # 数据数量
-DATA_AMOUNT = 5000
+DATA_AMOUNT = 200000
 # 访问次数
 VISIT_TIME = 1000000
 # 最大循环长度
 MAX_CYCLE_LENGTH = 5
 # 两次循环访问之间的最大间隔
-MAX_CYCLE_INTERVAL = 10
+MAX_CYCLE_INTERVAL = 3
 # 生成循环数据的概率
 CYCLE_PROBABILITY = 0.1
+CYCLE_AGAIN_PROBABILITY = 0.5
 
 # 读取GeoLite2-Country-Blocks-IPv4.csv
 df = pd.read_csv(DATA_PATH)
@@ -32,6 +33,8 @@ while(len(cyclic_data) < VISIT_TIME+50):
             # 写入达到循环间隔的循环数据
             temp_data = choose_ip_array[int(key.split(" ")[0]): int(key.split(" ")[1])]
             cyclic_data.extend(temp_data)
+            if(np.random.random() < CYCLE_AGAIN_PROBABILITY):
+                cycle_dict[key] = np.random.randint(1,MAX_CYCLE_INTERVAL) + 1
         # 循环间隔-1
         cycle_dict[key] = cycle_dict[key] - 1
 
