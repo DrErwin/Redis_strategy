@@ -14,10 +14,10 @@ public class LRUCacheSimulator {
     public void accessData(String[] keys) {
         for (String key : keys) {
             if (cache.get(key) != null) {
-                System.out.println("Hit: " + key);
+                // System.out.println("Hit: " + key);
                 hitCount++;
             } else {
-                System.out.println("Miss: " + key);
+                // System.out.println("Miss: " + key);
                 missCount++;
                 cache.put(key, "Value-" + key);
             }

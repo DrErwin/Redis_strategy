@@ -1,22 +1,26 @@
+/*
+ * @Author: Yuhong Wu
+ * @Date: 2024-10-03 01:41:35
+ * @LastEditors: Yuhong Wu
+ * @LastEditTime: 2024-10-04 00:45:57
+ * @Description: 
+ */
 package java_strategy;
 
-import org.apache.commons.csv.*;
+public class LRUCacheTest {
 
-public class CacheTest {
     public static void main(String[] args) {
-        int[] keys = {1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5};
-        String[] strKeys = new String[keys.length];
-        for(int i = 0; i<keys.length; i++){
-            strKeys[i] = Integer.toString(keys[i]);
-        }
+        DataReader dataReader = new DataReader("data/cyclic_visit.txt");
         int[] capacities = {5, 10, 15};
 
         for (int capacity : capacities) {
             LRUCacheSimulator simulator = new LRUCacheSimulator(capacity);
-            simulator.accessData(strKeys);
+            simulator.accessData(dataReader.getData());
             System.out.println("Capacity: " + capacity + ", Hit Rate: " + simulator.getHitRate());
         }
     }
+
+
         
 
 }

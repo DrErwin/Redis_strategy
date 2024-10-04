@@ -3,11 +3,9 @@ package java_strategy;
  * @Author: Yuhong Wu
  * @Date: 2024-10-01 12:45:20
  * @LastEditors: Yuhong Wu
- * @LastEditTime: 2024-10-01 13:05:21
+ * @LastEditTime: 2024-10-04 00:41:33
  * @Description: 
  */
-
-import java_strategy.LRUCache;
 
 
 public class testLRU {

@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "LRUCacheTest",
+            "request": "launch",
+            "mainClass": "java_strategy.LRUCacheTest",
+            "projectName": "Redis策略_aaaddc26"
+        },
+        {
+            "type": "java",
             "name": "LRU",
             "request": "launch",
             "mainClass": "LRU",
