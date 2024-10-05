@@ -15,8 +15,8 @@ public class ExponentialDecayCalculator {
     }
 
     public double calculate(double lastValue, double lastTime){
-        double timeDiff = (System.currentTimeMillis() - lastTime) / (1000*60*60);
-        // double timeDiff = (System.currentTimeMillis() - lastTime) / (1000);
+        // double timeDiff = (System.currentTimeMillis() - lastTime) / (1000*60*60);
+        double timeDiff = (System.currentTimeMillis() - lastTime) / (1000);
         return lastValue * Math.exp(-a * timeDiff) + W;
     }
 }

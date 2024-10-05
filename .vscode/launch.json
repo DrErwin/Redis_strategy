@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "LFUCacheTest",
+            "request": "launch",
+            "mainClass": "java_strategy.LFUCacheTest",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "LRUCacheTest",
             "request": "launch",
             "mainClass": "java_strategy.LRUCacheTest",

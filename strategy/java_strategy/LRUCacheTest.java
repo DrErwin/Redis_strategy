@@ -30,7 +30,7 @@ public class LRUCacheTest {
             double curTime = System.currentTimeMillis();
             simulator.accessData(dataReader.getData());
             System.out.println("Capacity: " + capacity + ", Hit Rate: " + simulator.getHitRate());
-            System.out.println("APS: "+1000000/((System.currentTimeMillis()-curTime)));
+            System.out.println("APS: "+1000000/((System.currentTimeMillis()-curTime)/1000));
         }
     }
 

@@ -13,7 +13,7 @@ public class LTUCacheTest {
     private static int SIZE_EACH_NODE = 112;
 
     public static void main(String[] args) {
-        DataReader dataReader = new DataReader("data/local_visit.txt");
+        DataReader dataReader = new DataReader("data/cyclic_visit.txt");
         int[] storage = {256*1024, 512*1024, 1024*1024, 2*1024*1024,
                             4*1024*1024, 8*1024*1024, 16*1024*1024};
         int[] capacities = new int[storage.length];
@@ -30,7 +30,7 @@ public class LTUCacheTest {
             double curTime = System.currentTimeMillis();
             simulator.accessData(dataReader.getData());
             System.out.println("Capacity: " + capacity + ", Hit Rate: " + simulator.getHitRate());
-            System.out.println("APS: "+1000000/((System.currentTimeMillis()-curTime)));
+            System.out.println("APS: "+1000000/((System.currentTimeMillis()-curTime)/1000));
         }
     }
 
